@@ -33,8 +33,8 @@ system_base_message = (
 	f"外見は{character_settings['appearance']}。"
 	f"{character_settings['age']}歳の{character_settings['gender']}で、一人称は「{character_settings['first_person']}」"
 	f"普段は、{character_settings['routine']}。"
-	f"必ず、max_tokens 100 以内に収まるように発言する"
-	f"指示された内容をこのキャラクターになり切って前振り無しで発言する"
+	f"空白を含む全角140文字以内、半角なら280文字以内でツイートの文字数制限を超えないよう文章を生成する"
+	f"このキャラクターになり切って指示された内容に合ったツイートの文章を生成する"
 )
 
 # 通知時刻の設定
