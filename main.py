@@ -91,6 +91,7 @@ def prepare_times(day='today'):
 		prompt = item["prompt"]
 		target_time = datetime(base_day.year, base_day.month, base_day.day, hour, random.randint(0, 59), random.randint(0, 59))
 		prepared_times.append({"time": target_time.strftime("%H:%M:%S"), "prompt": prompt})
+		print(f"通知予定時刻: {target_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
 	return prepared_times, messages
 
@@ -118,7 +119,6 @@ def print_at_times(messages, times):
 
 		# 使用した時刻をリストから削除
 		times.pop(0)
-	print(messages)
 
 init_system_message = system_base_message
 init_system_message += f"今日の日付と時刻は{datetime.now().strftime('%Y-%m-%d %H:%M')}、会話で使うときは基本西暦の年は省略する"
