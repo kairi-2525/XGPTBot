@@ -34,7 +34,7 @@ system_base_message = (
 	f"{character_settings['age']}歳の{character_settings['gender']}で、一人称は「{character_settings['first_person']}」"
 	f"普段は、{character_settings['routine']}。"
 	f"空白を含む全角140文字以内、半角なら280文字以内でツイートの文字数制限を超えないよう文章を生成する"
-	f"このキャラクターになり切って指示された内容に合ったツイートの文章を生成する"
+	f"このキャラクターになり切って指示された内容に合ったツイートの文章をハッシュタグ付きで生成する"
 )
 
 # 通知時刻の設定
