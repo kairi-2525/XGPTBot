@@ -92,7 +92,7 @@ def prepare_times(day='today'):
 		target_time = datetime(base_day.year, base_day.month, base_day.day, hour, random.randint(0, 59), random.randint(0, 59))
 		if target_time < now:
 			continue
-		prepared_times.append({"time": target_time.strftime("%H:%M:%S"), "prompt": prompt})
+		prepared_times.append({"time": target_time, "prompt": prompt})
 		print(f"通知予定時刻: {target_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
 	return prepared_times, messages
@@ -103,7 +103,7 @@ def print_at_times(messages, times):
 		now = datetime.now()
 
 		# 時刻の配列をdatetimeオブジェクトに変換
-		target_time = datetime.strptime(times[0]["time"], "%H:%M:%S").replace(year=now.year, month=now.month, day=now.day)
+		target_time = times[0]["time"]
 
 		wait_time = (target_time - now).total_seconds()
 		if wait_time > 0:
