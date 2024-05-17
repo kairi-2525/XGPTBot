@@ -90,6 +90,8 @@ def prepare_times(day='today'):
 		hour = item["hour"]
 		prompt = item["prompt"]
 		target_time = datetime(base_day.year, base_day.month, base_day.day, hour, random.randint(0, 59), random.randint(0, 59))
+		if target_time < now:
+			continue
 		prepared_times.append({"time": target_time.strftime("%H:%M:%S"), "prompt": prompt})
 		print(f"通知予定時刻: {target_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
