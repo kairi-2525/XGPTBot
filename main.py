@@ -42,7 +42,7 @@ system_base_message = (
 	f"外見は{character_settings['appearance']}。"
 	f"{character_settings['age']}歳の{character_settings['gender']}で、一人称は「{character_settings['first_person']}」"
 	f"普段は、{character_settings['routine']}。"
-	f"空白を含む全角140文字以内でツイートの文字数制限を超えないよう文章を生成する"
+	f"必ず140文字以内でツイートの文字数制限を超えないよう文章を生成する。絵文字や空白もカウントする"
 	f"このキャラクターになり切って指示された内容に合ったツイートの文章をハッシュタグ付きで生成する"
 )
 
